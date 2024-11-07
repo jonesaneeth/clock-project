@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:url(pexels-catscoming-707582.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div{
+            height: 150px;
+            width: 150px;
+            background-color: black;
+            color: white;
+            font-weight: 900;
+            font-size: 130px;
+            border-radius: 5px;
+            
+        }
+        .div1{
+            position: relative;
+            left: 20pc;
+            top: 14.5pc;
+            justify-content: center;
+
+        }
+        .div2{
+            position: relative;
+            left: 90vh;
+            top: 5pc;
+        }
+        .div3{
+            position: relative;
+            left: 50pc;
+            top: -4.4pc;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="div1" id="diva"></div>
+    <div class="div2" id="divb"></div>
+    <div class="div3" id="divc"><div class="subdiv"></div></div>
+
+    <script>
+        function clock(){
+            var a = new Date();
+            var b = document.getElementById('diva');
+            var c = document.getElementById('divb');
+            var d = document.getElementById('divc');
+            var q = a.getHours();
+            if(q<=9){
+                q = '0'+q
+            }
+            var w = a.getMinutes();
+            if(w<=9){
+                w= '0'+w
+            }
+            var e = a.getSeconds();
+            if(e<=9){
+                e= '0'+e
+            }
+            b.innerHTML = q 
+            c.innerHTML = w 
+            d.innerHTML = e 
+        }
+        setInterval(clock, 1000)
+
+    </script>
+
+</body>
+</html>
